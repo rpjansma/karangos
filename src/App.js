@@ -37,25 +37,24 @@ function Main() {
   const classes = useStyles();
   return (
     <Box className={classes.main}>
-      <BrowserRouter>
-        {" "}
-        {/*  Inicia a região onde pode haver troca dinâmica de elementos */}
-        <TopBar />
-        <Box id="routed" className={classes.routed}>
-          <Switch>
-            {" "}
-            {/* Determina qual elemento será exibido, de acordo com a rota */}
-            <Route path="/list">
-              <KarangosList />
-            </Route>
-            <Route path="/new">
-              <KarangosForm />
-            </Route>
-          </Switch>
-        </Box>
-        <FooterBar />
-      </BrowserRouter>
-    </Box>
+    <BrowserRouter> {/*  Inicia a região onde pode haver troca dinâmica de elementos */}
+      <TopBar />
+      <Box id="routed" className={classes.routed}>
+        <Switch> {/* Determina qual elemento será exibido, de acordo com a rota */}
+          
+          <Route path="/list">
+            <KarangosList />
+          </Route>
+
+          <Route path="/new">
+            <KarangosForm />
+          </Route>
+
+        </Switch>
+      </Box>
+      <FooterBar />
+    </BrowserRouter>
+  </Box>
   );
 }
 
